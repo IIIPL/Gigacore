@@ -99,6 +99,25 @@ const leaders = [
             { label: "Regions", value: "India + ME" },
         ],
     },
+    {
+        name: "Prashanth Shetty",
+        initials: "PS",
+        title: "Business Development",
+        bio: "Leads business development across GigaCore’s hydrogen and energy infrastructure platform, driving institutional investor engagement, commercialisation strategy and strategic partnerships.",
+        background:
+            "Former executive leader at Verdigris, EMC and SAP with experience spanning global go-to-market strategy and enterprise technology platforms.",
+        education: [
+            "MBA - The Wharton School",
+            "MS Engineering - Stanford University",
+        ],
+        tags: ["Business Development", "Commercialisation", "Partnerships"],
+        credentials: [
+            { label: "Prior MNCs", value: "3" },
+            { label: "Focus", value: "GTM Strategy" },
+            { label: "Alma Mater", value: "Stanford" },
+            { label: "MBA", value: "Wharton" },
+        ],
+    },
 ];
 
 const advisors = [
@@ -116,6 +135,37 @@ const advisors = [
         ],
         education: ["M.S. Engineering — Stanford University", "MBA — Harvard Business School"],
     },
+    {
+        name: "Pranay Kothari",
+        initials: "PK",
+        title: "Strategic Advisor",
+        description:
+            "Pranay Kothari, senior executive at Polyplex Corporation, joins Gigacore as a Strategic Advisor, bringing deep global industrial experience across large-scale manufacturing and supply chains. Through Polyplex’s operations spanning Europe, the United States, and Asia, he has developed strong relationships across international industrial ecosystems, customers, and partners. His exposure to cross-border operations, capital-intensive plant development, and global market dynamics provides Gigacore with valuable strategic insight as it scales. He offers guidance on international expansion, plant execution, and supply chain structuring. His network supports access to potential partners, customers, and investors across key geographies. With board-level perspective and operational discipline, he strengthens Gigacore’s positioning with institutional stakeholders. His involvement enhances both credibility and execution capability as the company moves toward commercial deployment.",
+        credentials: [
+            { label: "Regions", value: "3" },
+            { label: "Experience", value: "Global Ind." },
+            { label: "Role", value: "Exec. Polyplex" },
+            { label: "Focus", value: "Scale-up" },
+        ],
+        education: [],
+    },
+    {
+        name: "Neeraj Agarwal",
+        initials: "NA",
+        title: "Senior Project & Operations Leader",
+        description:
+            "Neeraj Agarwal is a senior project and operations leader bringing deep execution and infrastructure expertise to GigaCore’s industrial deployment strategy. He has over 25 years of experience across energy, oil & gas, and infrastructure projects in India and the Middle East. He held leadership roles at Engineers India Limited, including Chief Operating Officer (UAE) and Chief General Manager, and worked with Worley. He has led large-scale projects ranging from $200M to over $1B and served as Lender’s Independent Engineer on projects of approximately $10B, working with international banking consortiums.",
+        credentials: [
+            { label: "Experience", value: "25+ yrs" },
+            { label: "Projects Led", value: "$1B+" },
+            { label: "Lender's Eng", value: "$10B" },
+            { label: "Alma Mater", value: "IIT" },
+        ],
+        education: [
+            "B.Tech - IIT Roorkee",
+            "Certified Independent Director (IICA)",
+        ],
+    },
 ];
 
 const techExpertise = [
@@ -126,7 +176,7 @@ const techExpertise = [
 ];
 
 const teamStats = [
-    { icon: Users, value: "5", label: "Executive Leaders" },
+    { icon: Users, value: "6", label: "Executive Leaders" },
     { icon: Briefcase, value: "14", label: "Technical Specialists" },
     { icon: Globe, value: "3", label: "Continents" },
     { icon: Award, value: "25+", label: "Avg. Yrs Experience" },
@@ -353,56 +403,6 @@ export default function TeamPage() {
                             </motion.div>
                         ))}
 
-                        {/* 6th slot filler — decorative dark card */}
-                        <motion.div
-                            variants={fadeUp}
-                            className="relative bg-[#0b1320] border border-brand-primary/25 rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden"
-                        >
-                            {/* Glow blobs */}
-                            <div className="absolute -top-16 -right-16 w-56 h-56 bg-brand-primary/15 rounded-full blur-3xl pointer-events-none" />
-                            <div className="absolute -bottom-16 -left-10 w-48 h-48 bg-brand-primary/8 rounded-full blur-2xl pointer-events-none" />
-                            {/* Subtle grid overlay */}
-                            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.07] pointer-events-none" />
-
-                            <div className="relative z-10 flex flex-col h-full gap-8">
-                                <div>
-                                    <span className="text-[11px] font-bold uppercase tracking-widest text-brand-primary mb-4 block">The Collective</span>
-                                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug">
-                                        Built for<br />Industrial Reality
-                                    </h3>
-                                    <p className="text-gray-400 text-[14px] leading-relaxed">
-                                        Combining IIT-trained engineering, global EPC execution, Fortune 500 finance, and $2B+ advisory backing to take hydrogen from lab to industry.
-                                    </p>
-                                </div>
-
-                                {/* Mini stat grid */}
-                                <div className="grid grid-cols-2 gap-3">
-                                    {[
-                                        { value: "IIT", label: "Engineering" },
-                                        { value: "$2B+", label: "Advisor AUM" },
-                                        { value: "CA", label: "Finance Lead" },
-                                        { value: "3", label: "Continents" },
-                                    ].map((s, i) => (
-                                        <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
-                                            <div className="text-[22px] font-black text-brand-primary leading-none">{s.value}</div>
-                                            <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 mt-1.5">{s.label}</div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Decorative ring graphic */}
-                                <div className="flex justify-center mt-auto pt-2">
-                                    <div className="relative w-28 h-28 flex items-center justify-center">
-                                        <div className="absolute inset-0 rounded-full border-2 border-brand-primary/20 animate-[spin_20s_linear_infinite]" />
-                                        <div className="absolute inset-3 rounded-full border border-brand-primary/30 animate-[spin_14s_linear_infinite_reverse]" />
-                                        <div className="absolute inset-6 rounded-full border border-brand-primary/40" />
-                                        <div className="w-10 h-10 rounded-full bg-brand-primary/15 border border-brand-primary/40 flex items-center justify-center">
-                                            <Users size={18} className="text-brand-primary" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
 
                     </motion.div>
                 </SectionWrapper>
